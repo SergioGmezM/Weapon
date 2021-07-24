@@ -6,6 +6,7 @@ public class CameraLook : MonoBehaviour
 {
     public float mouseSensitiviy = 500f;
     public Transform playerBody;
+    public Transform weapon;
 
     float xRotation = 0f;
 
@@ -25,6 +26,7 @@ public class CameraLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        weapon.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
