@@ -11,7 +11,6 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject LaserBeam;
 
     private bool isFiring = false;
-    private float range = 500f;
 
     // Update is called once per frame
     void Update()
